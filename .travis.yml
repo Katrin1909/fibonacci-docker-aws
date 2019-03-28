@@ -14,7 +14,7 @@ after_success:
     - docker build -t katja1909/fibonacci-server ./server
     - docker build -t katja1909/fibonacci-worker ./worker
 # Log in to the docker CLI (for that first define environment variables 
-# on: dockerhub -> your project -> more options -> settings)
+# on dockerhub -> your project -> more options -> settings)
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 # Take those images and push them to docker hub
     - docker push katja1909/fibonacci-client
